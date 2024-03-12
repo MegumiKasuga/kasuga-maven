@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 这个是一个样例 mvn 配置文件 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.carole</groupId>
+    <artifactId>Mixed-Arithmetic-Logic-Interpreter</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 在这里设置对应的github提交服务器 -->
+        <github.global.server>github</github.global.server>
+    </properties>
+
+    <dependencies>
+        <!-- dependency -->
+    </dependencies>
+
+    <!-- 这个是对应的本地库, 按照这个写即可 -->
+    <distributionManagement>
+        <repository>
+            <id>maven.repo</id>
+            <name>Local Staging Repository</name>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+    </distributionManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <altDeploymentRepository>
+                        <!-- 这里的mali也是改成对应的项目名称或缩写 -->
+                        internal.repo::default::file://${project.build.directory}/mali
+                    </altDeploymentRepository>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <message>Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/mali</outputDirectory>
+                    <!-- 这个 heads后面的mali按需更改成对应的项目名称或者缩写 -->
+                    <branch>refs/heads/mali</branch>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <!-- 这里设置的是 maven 的仓库，填 kasuga-maven -->
+                    <repositoryName>kasuga-maven</repositoryName>
+                    <repositoryOwner>MegumiKasuga</repositoryOwner>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!--suppress MybatisMapperXmlInspection -->
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+<!-- 运行时运行 maven 项目里的 clean 和 deploy 即可 -->
+<!-- git token 每一个月更新一次，在 git 用户 settings -> developer settings -> 左侧的 access token 里面 -->
