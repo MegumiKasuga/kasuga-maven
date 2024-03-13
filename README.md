@@ -1,5 +1,5 @@
 # kasuga-maven
-A maven Repo that provides survices for dependencies.
+A maven Repo that provides services for dependencies.
 
 ### How to use projects listed in this mvn repo ? 
 
