@@ -6,7 +6,7 @@
 
     <groupId>edu.carole</groupId>
     <artifactId>Mixed-Arithmetic-Logic-Interpreter</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -14,9 +14,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <github.global.server>github</github.global.server>
     </properties>
-
-    <dependencies>
-    </dependencies>
 
     <distributionManagement>
         <repository>
