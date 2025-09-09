@@ -61,8 +61,8 @@ dependencies {
     Repo: https://github.com/MegumiKasuga/Mixed-Arithmetic-Logic-Interpreter
 ```
   ${artifact-2-use} = Mixed-Arithmetic-Logic-Interpreter
-  ${branch-2-use} = mali
-  ${artifact-version} = 1.0.0
+  ${branch-2-use} = mali_${artifact_version}
+  ${artifact-version} = 1.1.0
   ${artifact-min-version} = 1.0.0
   ${artifact-max-version} = 2.0.0
 ```
