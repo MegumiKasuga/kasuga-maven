@@ -1,10 +1,12 @@
+[![en-us](https://img.shields.io/badge/en-us-blue.svg)](https://github.com/MegumiKasuga/kasuga-maven/blob/master/README.md)
+[![zh-cn](https://img.shields.io/badge/zh-cn-green.svg)](https://github.com/MegumiKasuga/kasuga-maven/blob/master/README.zh-cn.md)
 # kasuga-maven
 A maven Repo that provides services for dependencies.
 
 ### How to use projects listed in this mvn repo ? 
 
 Maven
-```
+``` xml
 <dependency>
   <groupId>edu.carole</groupId>
   <artifactId>${artifact-2-use}</artifactId>
@@ -18,7 +20,7 @@ Maven
 ```
 
 Gradle
-```
+``` groovy
 repositories {
     // Not the 'repositories' closure in the 'build-script' closure.
     maven {
@@ -65,4 +67,15 @@ dependencies {
   ${artifact-version} = 1.1.0
   ${artifact-min-version} = 1.0.0
   ${artifact-max-version} = 2.0.0
+```
+
+  - BrainFuckJ (bfj)
+    
+    repo: https://github.com/MegumiKasuga/BrainFuckJ
+```
+  ${artifact-2-use} = BrainFuckJ                          
+  ${branch-2-use} = bfj_${artifact_version}               
+  ${artifact-version} = 1.01                             
+  ${artifact-min-version} = 1.01                         
+  ${artifact-max-version} = 1.01                         
 ```
