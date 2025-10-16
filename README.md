@@ -76,6 +76,6 @@ dependencies {
   ${artifact-2-use} = BrainFuckJ                          
   ${branch-2-use} = bfj_${artifact_version}               
   ${artifact-version} = 1.01                             
-  ${artifact-min-version} = 1.01                         
-  ${artifact-max-version} = 1.01                         
+  ${artifact-min-version} = 1.02                         
+  ${artifact-max-version} = 1.02                         
 ```
