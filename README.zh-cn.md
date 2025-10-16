@@ -75,7 +75,7 @@ dependencies {
 ```
   ${artifact-2-use} = BrainFuckJ                          // 工件
   ${branch-2-use} = bfj_${artifact_version}               // 分支
-  ${artifact-version} = 1.01                              // 工件版本
-  ${artifact-min-version} = 1.01                          // 工件最低版本
-  ${artifact-max-version} = 1.01                          // 工件最高版本
+  ${artifact-version} = 1.02                              // 工件版本
+  ${artifact-min-version} = 1.02                          // 工件最低版本
+  ${artifact-max-version} = 1.02                          // 工件最高版本
 ```
